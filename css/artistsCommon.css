@@ -1,0 +1,30 @@
+#TopHeader{
+    background-color: var(--darkColor);
+    height: 35vh;
+    width: 100vw;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#NameDesc{
+    color: var(--lightColor);
+    
+    width: 100%;
+    
+
+
+    padding: 2vw;
+}
+#artistNamee{
+    font-size: 5vw;
+    font-weight: 600;
+}
+#artistmail{
+    font-size: 2vw;
+}
+i{
+    color: var(--lightColor);
+    padding: 2vh;
+    font-size: 100%;
+}

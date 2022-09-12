@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik Mono One', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+:root {
+    --themeColor: #325899;
+    --darkColor: #000;
+    --lightColor: #EEE5E9;
+}
+::-webkit-scrollbar {
+    display: none;
+  }
+body {
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: var(--lightColor);
+
+}
+
+/* menu part  */
+
+.popup,
+.overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(1px);
+    z-index: 11;
+    display: none;
+    transition: all 500ms ease;
+
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--lightColor);
+    width: 65vw;
+    height: 55vh;
+    z-index: 12;
+    padding: 1.5vw;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+}
+
+.active {
+    display: block;
+    transition: all 500ms ease;
+}
+
+.menuContentHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1vh;
+    border-bottom: 1px solid var(--textColor);
+    font-size: 1.5vw;
+    color: var(--textColor);
+}
+
+#menuMainContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contentLeft {
+    padding: 5vh;
+    border: 1px solid var(--textColor);
+    margin-top: 1vh;
+    color: var(--textColor)
+}
+
+
+
+.contentRightRight {
+    border: 1px solid var(--textColor);
+    height: 35vh;
+    width: 12vw;
+    padding: 10px;
+}
+
+#contentRight {
+    padding: 5vh;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 1vh;
+    color: var(--textColor);
+}
+
+.close-btn {
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+.menuNavigation {
+    list-style: none;
+
+}
+
+.menuNavigation li {
+    font-size: 3vw;
+}
+
+.menuNavigation li a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.Icons {
+    padding-top: 2vh;
+}
+
+.Icons i {
+    font-size: 2vw;
+    color: var(--textColor);
+    cursor: pointer;
+}
+
+.email {
+    width: 100%;
+    margin-top: 1vh;
+    text-align: center;
+    border: 1px solid;
+    padding: 1vh;
+}
+
+.contentRightHeading {
+    text-align: right;
+}
+
+nav {
+    position:fixed;
+    top: 0;
+    left:0;
+    right:0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 2vw;
+    z-index: 10;
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
+
+#menuIcon {
+    height: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+
+#menuIcon div{
+    height: 1.5px;
+    width: 25px;
+    background-color:var(--lightColor);
+}
+
+#navleft {
+    background: url(/logo-final.png);
+    mix-blend-mode: lighten;
+    background-size: cover;
+    height: 5vh;
+    width: 5vh;
+}
+#navmid{
+    color:var(--lightColor);
+    
+}
+
+section {
+    height: 100vh;
+
+}
+
+#home {
+    height: 100vh;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+
+}
+#center {
+    position: absolute;
+    padding: 10vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--lightColor);
+}
+
+#logo {
+    height: 40vh;
+    width: 40vh;
+    background: url(/logo-final.png);
+    background-size: cover;
+    padding-right: 20vw;
+    background-repeat: no-repeat;
+    filter: invert(0.1);
+
+
+
+
+}
+
+#welcome {
+    color: var(--lightColor);
+    font-size: 3vw;
+
+}
+
+#ptr {
+    color: var(--lightColor);
+    font-size: 6vw;
+    font-weight: 700;
+
+}
+
+#buttons{
+    margin-top:5vh ;
+    display: flex;
+    flex-direction: row;
+    gap:2vw;
+    width:50%;
+    justify-content: space-between;
+    align-items: center;
+}
+#Demo{
+    background-color: var(--lightColor);
+    color: var(--darkColor);
+    padding: 2vh 2vw;
+    border: 1px solid var(--lightColor);
+}
+#ArtistLogin{
+    border: 1px solid var(--lightColor);
+    padding: 2vh 2vw;
+}
+#ArtistLogin:hover{
+    background-color: var(--lightColor);
+    transition: 500ms ease;
+    color: var(--darkColor);
+    pointer-events: all;
+    cursor: pointer;
+  
+}
+#Demo:hover{
+    background-color: var(--darkColor);
+    color: var(--lightColor);
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* second page */
+#Who {
+    
+    height: 100vh;
+  
+}
+#WhoTop{
+    padding: 0 20vw;
+}
+#WhoHeading{
+    color:var(--darkColor);
+    font-size: 5vw;
+    padding-top: 15vh;
+    text-align: center;
+}
+
+.banner{
+    margin-top:10vh;
+    height: 20vh;
+    background-color: var(--darkColor);
+    width: 100%;
+    color: var(--lightColor);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 6vw;
+
+}
+.banner span{
+    font-size: 3vw
+}
+#Whodetails{
+    text-align: justify;
+}
+
+
+/* third page  */
+#Releases{
+    height:max-content
+}
+#ReleasesContent{
+    margin-top: 20vh;
+    padding: 0 15vw;
+}
+#ReleasesHead{
+    font-size: 5vw;
+    text-align: center;
+}
+#ReleaseBoxes{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   align-items: center;
+   border:1px solid var(--darkColor);
+    gap:4vh;
+    justify-content: center;
+    justify-content: space-between;
+    align-self: center;
+    padding: 2vw;
+
+
+}
+.CardImage{
+    height:20vw;
+    width:20vw;
+    filter: grayscale(1);
+   
+}
+.ReleaseCard{
+    background-color: var(--darkColor);
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    gap:2vh;
+    cursor: pointer;
+    min-height: 100%;
+    
+}
+.CardBottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2vh ;
+
+}
+.Title, .Artist, .CardRight{
+    color:var(--lightColor);
+    font-size: 10px;
+}
+.Title{
+    font-size: 2vw;
+}
+.CardImage:hover{
+    filter: grayscale(0);
+    transition: all 500ms ease;
+}
+#ShowAll{
+    text-align: center;
+    background-color: var(--darkColor);
+    color: var(--lightColor);
+    font-size: 3vw;
+    margin: 5vh 15vw;
+}
+
+
+
+
+#GotDemo{
+    height: fit-content;
+}
+#GotDemoHeading{
+    font-size: 5vw;
+    text-align: center;  
+}
+#DemoBody{
+    margin: 5vh 10vw;
+    margin-bottom: 0;
+    border: 1px solid var(--darkColor);
+  
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+
+}
+#DemoTop{
+    height:30vh;
+    width:80vw;
+    overflow: hidden;
+    text-align: justify;
+    position: absolute;
+    color:rgb(192, 183, 183);
+    
+    
+}
+#DemoMid{
+    /* background-color: var(--lightColor); */
+    color: var(--darkColor);
+    position: absolute;
+    top:50%;
+    text-align: center;
+    width: min-content;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 2vw;
+
+    font-size: 4vw;
+}
+#DemoBottom{
+    border: 1px solid var(--darkColor);
+    border-top: none;
+    margin:0 10vw;
+    padding: 10vw;
+    padding-bottom: 0;
+    text-align: center;
+    padding-top: 2vh;
+
+}
+#DemoBottom a{
+    color: var(--darkColor);
+    text-decoration: none;
+    display: block;
+    font-size: 1.1em;
+    font-weight: 600;
+    
+}
+#DemoForm{
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    gap:2vh;
+}
+.input{
+    background-color: var(--lightColor);
+    border: 1px solid var(--darkColor);
+    padding: 1vw;
+}
+button{
+    background-color: var(--darkColor);
+    color: var(--lightColor);
+    padding: 2vw;
+    border: none
+}
+
+footer{
+    margin-top: 10vh;
+    background-color: var(--darkColor);
+    display: flex;
+    flex-direction: column;
+    color: var(--lightColor);
+    text-align: center;
+    padding: 10vh;
+}
+.links a{
+    color: var(--lightColor);
+    font-size: 1.5vw;
+}
